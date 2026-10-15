@@ -1,6 +1,6 @@
 // Offline-Cache. Bei jeder Änderung der App VERSION erhöhen, sonst bleibt das iPad auf dem alten Stand.
-const VERSION = 'ec-v2';
-const DATEIEN = ['./', 'index.html', 'style.css', 'schema.js', 'app.js', 'manifest.webmanifest', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png'];
+const VERSION = 'ec-v3';
+const DATEIEN = ['./', 'index.html', 'style.css', 'schema.js', 'app.js', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(DATEIEN)).then(() => self.skipWaiting()));
